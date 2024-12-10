@@ -3,7 +3,6 @@ import RestaurantCard from "./RestaurantCard";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getRestaurantByUserId } from "../../State/Customers/Restaurant/restaurant.action";
-import AddressCard from "../../customers/components/Address/AddressCard";
 import AddRestaurantCard from "./AddRestaurantCard";
 
 

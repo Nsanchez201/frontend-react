@@ -1,5 +1,4 @@
 import {
-  Badge,
   Button,
   Card,
   CardContent,
@@ -9,18 +8,16 @@ import {
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import InstagramIcon from "@mui/icons-material/Instagram";
-// import XIcon from '@mui/icons-material/X';
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import {
-  updateRestaurant,
   updateRestaurantStatus,
 } from "../../State/Customers/Restaurant/restaurant.action";
 
 const Details = () => {
   const dispatch = useDispatch();
-  const { auth, restaurant, ingredients } = useSelector((store) => store);
+  const { auth, restaurant } = useSelector((store) => store);
   const jwt = localStorage.getItem("jwt");
 
   const handleRestaurantStatus = () => {
@@ -41,7 +38,6 @@ const Details = () => {
           <Button
             onClick={handleRestaurantStatus}
             size="large"
-            // sx={{ padding: "1rem 2rem" }}
             className="py-[1rem] px-[2rem]"
             variant="contained"
             color={restaurant.usersRestaurant?.open ? "error" : "primary"}
@@ -226,22 +222,6 @@ const Details = () => {
                     </a>
                   </div>
                 </div>
-                {/* <div className="flex">
-                  <p className="w-48">Twitter</p>
-                  <p className="text-gray-400">
-                    {" "}
-                    <span className="pr-5">-</span>{" "}
-                    <a
-                      href={
-                        restaurant.usersRestaurant?.contactInformation.instagram
-                      }
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <TwitterIcon sx={{fontSize:"3rem"}} />
-                    </a>
-                  </p>
-                </div> */}
               </div>
             </CardContent>
           </Card>

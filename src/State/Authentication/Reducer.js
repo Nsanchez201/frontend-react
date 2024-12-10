@@ -48,7 +48,6 @@ const authReducer = (state = initialState, action) => {
         ...state,
         isLoading: false,
         error: null,
-        // favorites:[action.payload,...state.favorites],
         favorites: isPresentInFavorites(state.favorites, action.payload)
           ? state.favorites.filter((item) => item.id !== action.payload.id)
           : [action.payload, ...state.favorites],

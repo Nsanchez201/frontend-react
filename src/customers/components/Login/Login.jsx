@@ -7,8 +7,6 @@ import {
   Typography,
   CssBaseline,
   Container,
-  createTheme,
-  ThemeProvider,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -30,7 +28,6 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleSubmit = (values) => {
-    // You can handle login submission here, e.g., send data to your server
     console.log("Login form values:", values);
     dispatch(loginUser({ data: values, navigate }));
   };

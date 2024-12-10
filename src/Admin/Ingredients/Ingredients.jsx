@@ -14,17 +14,13 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-
 import CreateIngredientCategoryForm from "./CreateIngredientCategory";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CreateIngredientForm from "./CreateIngredientForm";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  getIngredientCategory,
-  getIngredientsOfRestaurant,
   updateStockOfIngredient,
 } from "../../State/Admin/Ingredients/Action";
-import { getRestaurantById } from "../../State/Customers/Restaurant/restaurant.action";
 
 const style = {
   position: "absolute",

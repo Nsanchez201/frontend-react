@@ -37,9 +37,6 @@ const RegistrationForm = () => {
   const navigate=useNavigate();
 
   const handleSubmit = (values) => {
-    
-    
-
     console.log("Form values:", values);
     dispatch(registerUser({userData:values,navigate}))
   };
@@ -100,7 +97,6 @@ const RegistrationForm = () => {
               fullWidth
               name="role"
               id="role"
-              // autoComplete="role"
               helperText={<ErrorMessage name="role" />}
             >
               <MenuItem value="ROLE_CUSTOMER">Customer</MenuItem>

@@ -9,7 +9,6 @@ import { getUser } from "./State/Authentication/Action";
 import { findCart } from "./State/Customers/Cart/cart.action";
 import {
   getAllRestaurantsAction,
-  getRestaurantById,
   getRestaurantByUserId,
 } from "./State/Customers/Restaurant/restaurant.action";
 

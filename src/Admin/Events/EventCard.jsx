@@ -22,8 +22,8 @@ const EventCard = ({ item,isCustomer }) => {
         <CardMedia
           sx={{ height: 345,
             '&:hover': {
-              transform: 'scale(1.1)', // Example: Scale the image on hover
-              transition: 'transform 0.5s ease-in-out', // Example: Apply a smooth transition effect
+              transform: 'scale(1.1)',
+              transition: 'transform 0.5s ease-in-out',
             },
            }}
           image={item.image}

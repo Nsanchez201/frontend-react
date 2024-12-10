@@ -172,40 +172,6 @@ const Cart = () => {
               </Card>
             </div>
             </div>
-            {/* <div className="flex justify-center items-center h-[90vh]">
-              <Card className="billDetails px-5 text-sm w-[20vw] p-10 space-y-5">
-                <p className=" text-xl font-bold text-center">Bill Details</p>
-                <div className="space-y-3">
-                  <div className="flex justify-between text-gray-400">
-                    <p>Item Total</p>
-                    <p>₹{cartTotal(cart.cartItems)}</p>
-                  </div>
-                  <div className="flex justify-between text-gray-400">
-                <p>Deliver Fee</p>
-                <p>₹21</p>
-              </div> 
-                  <div className="flex justify-between text-gray-400">
-                <p>Plateform Fee</p>
-                <p>₹5</p>
-              </div> 
-                  <div className="flex justify-between text-gray-400">
-                <p>GST and Restaurant Charges</p>
-                <p>₹33</p>
-              </div>
-                  <Divider />
-                  <div className="flex justify-between text-gray-400">
-                    <p>Total Pay</p>
-                    <p>₹{cartTotal(cart.cartItems)}</p>
-                  </div>
-                </div>
-                <Button
-                  onClick={createOrderUsingSelectedAddress}
-                  variant="contained"
-                >
-                  Checkout
-                </Button>
-              </Card>
-            </div> */}
           </section>
         </main>
       ) : (

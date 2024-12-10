@@ -24,7 +24,6 @@ const RestaurantsOrder = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { id } = useParams();
   const jwt = localStorage.getItem("jwt");
   const { restaurant, auth } = useSelector((store) => store);
 

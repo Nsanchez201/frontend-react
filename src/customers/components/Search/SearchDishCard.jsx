@@ -1,6 +1,5 @@
 import { Button, Card, CardContent, CardHeader, IconButton } from "@mui/material";
 import React from "react";
-import StarIcon from "@mui/icons-material/Star";
 import EastIcon from "@mui/icons-material/East";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../../State/Customers/Cart/cart.action";

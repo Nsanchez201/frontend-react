@@ -16,24 +16,14 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from "@mui/material";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  fetchRestaurantsOrder,
   updateOrderStatus,
 } from "../../State/Admin/Order/restaurants.order.action";
-// import {
-//   confirmOrder,
-//   deleteOrder,
-//   deliveredOrder,
-//   getOrders,
-//   shipOrder,
-// } from "../../state/Admin/Order/Action";
 
 const orderStatus = [
   { label: "Pending", value: "PENDING" },
@@ -43,13 +33,10 @@ const orderStatus = [
 ];
 
 const OrdersTable = ({ isDashboard, name }) => {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({ status: "", sort: "" });
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
   const { restaurantsOrder } = useSelector((store) => store);
   const [anchorElArray, setAnchorElArray] = useState([]);
-  const { id } = useParams();
 
   const handleUpdateStatusMenuClick = (event, index) => {
     const newAnchorElArray = [...anchorElArray];
@@ -87,7 +74,6 @@ const OrdersTable = ({ isDashboard, name }) => {
               <TableRow>
               <TableCell>Id</TableCell>
                 <TableCell>Image</TableCell>
-                {/* {!isDashboard && <TableCell>Title</TableCell>} */}
                 <TableCell>Customer</TableCell>
                 <TableCell>Price</TableCell>
              
@@ -97,9 +83,6 @@ const OrdersTable = ({ isDashboard, name }) => {
                 {!isDashboard && (
                   <TableCell sx={{ textAlign: "center" }}>Update</TableCell>
                 )}
-                {/* {!isDashboard && (
-                  <TableCell sx={{ textAlign: "center" }}>Delete</TableCell>
-                )} */}
               </TableRow>
             </TableHead>
             <TableBody>
@@ -207,19 +190,6 @@ const OrdersTable = ({ isDashboard, name }) => {
                         </div>
                       </TableCell>
                     )}
-                    {/* {!isDashboard && (
-                    <TableCell
-                      sx={{ textAlign: "center" }}
-                      className="text-white"
-                    >
-                      <Button
-                        onClick={() => handleDeleteOrder(item._id)}
-                        variant="text"
-                      >
-                        delete
-                      </Button>
-                    </TableCell>
-                  )} */}
                   </TableRow>
                 ))}
             </TableBody>

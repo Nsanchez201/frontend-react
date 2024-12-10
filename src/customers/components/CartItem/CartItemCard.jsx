@@ -1,10 +1,9 @@
-import { Button, Chip, Divider, IconButton } from "@mui/material";
+import { Chip, IconButton } from "@mui/material";
 import React from "react";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addItemToCart,
   removeCartItem,
   updateCartItem,
 } from "../../../State/Customers/Cart/cart.action";

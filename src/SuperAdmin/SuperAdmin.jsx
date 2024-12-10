@@ -6,13 +6,6 @@ import Customers from "./SuperAdminCustomerTable/Customers";
 import RestaurantTable from "./Restaurants/RestaurantTable";
 import SuperAdminRestaurant from "./Restaurants/SuperAdminRestaurant";
 import RestaurantRequest from "./RestaurantRequest/RestaurantRequest";
-// import AdminDashboard from "./Dashboard/AdminDashboard";
-// import AdminSidebar from "./AdminSidebar";
-// import RestaurantDashboard from "./Dashboard/RestaurantDashboard";
-// import RestaurantsOrder from "./Orders/RestaurantsOrder";
-// import RestaurantsMenu from "./MenuItem/RestaurantsMenu";
-// import AddMenuForm from "./AddMenu/AddMenuForm";
-// import CreateRestaurantForm from "./AddRestaurants/CreateRestaurantForm";
 
 const SuperAdmin = () => {
   return (

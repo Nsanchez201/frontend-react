@@ -9,8 +9,6 @@ import restaurantsOrderReducer from "../Admin/Order/restaurants.order.reducer";
 import superAdminReducer from "../SuperAdmin/superAdmin.reducer";
 import { ingredientReducer } from "../Admin/Ingredients/Reducer";
 
-
-
 const rootReducer=combineReducers({
 
     auth:authReducer,

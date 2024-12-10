@@ -1,11 +1,9 @@
 import {
   Box,
   Button,
-  Card,
   Grid,
   Modal,
   TextField,
-  Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,9 +11,7 @@ import {
   createEventAction,
   getRestaurnatsEvents,
 } from "../../State/Customers/Restaurant/restaurant.action";
-import { useParams } from "react-router-dom";
 import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
 import EventCard from "./EventCard";
@@ -41,7 +37,6 @@ const initialValues = {
 };
 
 const Events = () => {
-  const [image, setimage] = useState("");
   const dispatch = useDispatch();
   const { restaurant, auth } = useSelector((store) => store);
   const [openModal, setOpenModal] = useState(false);
@@ -104,13 +99,6 @@ const Events = () => {
         {restaurant.restaurantsEvents.map((item) => (
           <EventCard item={item} />
         ))}
-        {/* <div>
-          <img
-          className="rounded-md w-[25rem] h-[25-rem] object-cover"
-            src="https://images.pexels.com/photos/5638732/pexels-photo-5638732.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
-        </div> */}
       </div>
 
       <Modal

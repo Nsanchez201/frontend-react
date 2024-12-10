@@ -36,7 +36,6 @@ const ResetPasswordRequest = () => {
   const {auth}=useSelector(store=>store)
 
   const handleSubmit = (values) => {
-    // You can handle login submission here, e.g., send data to your server
     console.log("Login form values:", values);
     dispatch(resetPasswordRequest(values.email));
   };

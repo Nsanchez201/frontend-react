@@ -4,9 +4,8 @@ import RegistrationForm from "../../components/Register/Register";
 import { useLocation, useNavigate } from "react-router-dom";
 import LoginForm from "../../components/Login/Login";
 import ResetPasswordRequest from "./ResetPaswordRequest";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import ResetPasswordForm from "./ResetPasswordForm";
-import { resetPassword } from "../../../State/Authentication/Action";
 
 const style = {
   position: "absolute",
@@ -20,7 +19,7 @@ const style = {
   p: 4,
 };
 
-const Auth = ({ open, handleClose }) => {
+const Auth = ({ handleClose }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const { auth } = useSelector((store) => store);
