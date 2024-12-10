@@ -161,7 +161,7 @@ const MenuItemTable = ({ isDashboard, name }) => {
                     </TableCell>
                   )}
                   <TableCell sx={{ textAlign: "center" }}>
-                    ₹{item.price}
+                    ${item.price}
                   </TableCell>
 
                   <TableCell sx={{ textAlign: "center" }}>
