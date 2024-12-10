@@ -2,8 +2,6 @@ export const uploadToCloudinary = async (pics) => {
     
     if (pics) {
 
-       
-      
       const data = new FormData();
       data.append("file", pics);
       data.append("upload_preset", "zosh-social");

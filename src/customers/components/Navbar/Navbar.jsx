@@ -4,7 +4,6 @@ import PersonIcon from "@mui/icons-material/Person";
 import {
   Avatar,
   Badge,
-  Button,
   IconButton,
   Menu,
   MenuItem,
@@ -50,13 +49,6 @@ const Navbar = () => {
     navigate("/");
   };
 
-  // useEffect(()=>{
-  //   if(auth.user?.fullName){
-  //     // handleCloseAuthModel()
-  //   }
-
-  // },[auth.user])
-
   const handleLogout = () => {
     dispatch(logout());
     handleCloseMenu();
@@ -73,7 +65,6 @@ const Navbar = () => {
             Zosh Food
           </li>
         </div>
-        {/* <li className="font font-semibold">Home</li> */}
       </div>
       <div className="flex items-center space-x-2 lg:space-x-10">
         <div className="">

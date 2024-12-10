@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, makeStyles, Card } from '@mui/material';
-import { Create } from '@mui/icons-material';
+import { TextField, Button } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { createCategoryAction } from '../../State/Customers/Restaurant/restaurant.action';
@@ -10,7 +9,7 @@ import { createCategoryAction } from '../../State/Customers/Restaurant/restauran
 const CreateCategory = ({handleClose}) => {
     const {id}=useParams();
     const dispatch=useDispatch();
-    const {auth,restaurant}=useSelector(store=>store)
+    const {auth }=useSelector(store=>store)
     const jwt = localStorage.getItem("jwt")
  
   const [formData, setFormData] = useState({

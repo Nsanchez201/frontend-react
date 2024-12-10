@@ -1,7 +1,6 @@
 import * as React from "react";
 import Drawer from "@mui/material/Drawer";
 import Divider from "@mui/material/Divider";
-
 import { useMediaQuery } from "@mui/material";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -36,8 +35,7 @@ export default function SuperAdminSidebar({ handleClose, open }) {
       navigate("/");
       dispatch(logout());
     }
-    
-    
+
   };
 
   return (
@@ -49,7 +47,6 @@ export default function SuperAdminSidebar({ handleClose, open }) {
           open={open}
           onClose={handleClose}
           variant={isSmallScreen ? "temporary" : "permanent"}
-          // variant="persistent"
         >
           <div className="w-[50vw] lg:w-[20vw] group h-[100vh] flex flex-col justify-center text-xl space-y-8">
             <Divider verticle />

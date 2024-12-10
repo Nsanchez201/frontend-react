@@ -7,11 +7,9 @@ import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Grid from "@mui/material/Grid";
-import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import CloseIcon from "@mui/icons-material/Close";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
-import { useParams } from "react-router-dom";
 import {
   Alert,
   Box,
@@ -35,24 +33,6 @@ const MenuProps = {
   },
 };
 
-const validationSchema = Yup.object({
-  name: Yup.string().required("Name is required"),
-  description: Yup.string().required("Description is required"),
-  price: Yup.number()
-    .typeError("Price must be a number")
-    .required("Price is required")
-    .min(0, "Price must be greater than or equal to 0"),
-
-  imageUrl: Yup.string()
-    .url("Invalid URL format")
-    .required("Image URL is required"),
-  vegetarian: Yup.boolean().required("Is Vegetarian is required"),
-  seasonal: Yup.boolean().required("Is Gluten Free is required"),
-  quantity: Yup.number()
-    .typeError("Quantity must be a number")
-    .required("Quantity is required")
-    .min(0, "Quantity must be greater than or equal to 0"),
-});
 const initialValues = {
   name: "",
   description: "",
@@ -69,7 +49,6 @@ const initialValues = {
 
 const AddMenuForm = () => {
   const dispatch = useDispatch();
-  const { id } = useParams();
   const { restaurant, ingredients, auth ,menu} = useSelector((store) => store);
   const [uploadImage, setUploadingImage] = useState("");
   const jwt = localStorage.getItem("jwt");
@@ -255,7 +234,6 @@ const AddMenuForm = () => {
                       <MenuItem
                         key={item.id}
                         value={item}
-                        // style={getStyles(name, personName, theme)}
                       >
                         {item.name}
                       </MenuItem>
@@ -294,21 +272,6 @@ const AddMenuForm = () => {
                   </Select>
                 </FormControl>
               </Grid>
-              {/* <Grid item xs={6}>
-              <FormControl fullWidth variant="outlined">
-                <InputLabel htmlFor="isVegan">Is Vegan</InputLabel>
-                <Select
-                  id="isVegan"
-                  name="isVegan"
-                  label="Is Vegan"
-                  onChange={formik.handleChange}
-                  value={formik.values.isVegan}
-                >
-                  <MenuItem value={true}>Yes</MenuItem>
-                  <MenuItem value={false}>No</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid> */}
             </Grid>
             <Button variant="contained" color="primary" type="submit">
               Create Menu Item

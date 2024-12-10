@@ -25,11 +25,10 @@ import {
   getMenuItemsByRestaurantId,
   updateMenuItemsAvailability,
 } from "../../State/Customers/Menu/menu.action";
-import { updateStockOfIngredient } from "../../State/Admin/Ingredients/Action";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import { categorizedIngredients } from "../../customers/util/CategorizeIngredients";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Create, Remove } from "@mui/icons-material";
+import { Create } from "@mui/icons-material";
 
 const MenuItemTable = ({ isDashboard, name }) => {
   const location = useLocation();
@@ -54,14 +53,6 @@ const MenuItemTable = ({ isDashboard, name }) => {
       
     
   }, [ingredients.update,restaurant.usersRestaurant]);
-
-  // console.log(
-  //   "-------- ",
-  //   menu.menuItems[1].ingredients,
-  //   categorizedIngredients(menu.menuItems[1].ingredients)
-  // );
-
-  
 
   const handleFoodAvialability = (foodId) => {
     dispatch(updateMenuItemsAvailability({foodId,jwt:auth.jwt || jwt}));
@@ -93,14 +84,12 @@ const MenuItemTable = ({ isDashboard, name }) => {
               <TableRow>
                 <TableCell>Image</TableCell>
                 <TableCell>Title</TableCell>
-                {/* <TableCell sx={{ textAlign: "center" }}>Category</TableCell> */}
                 {!isDashboard && (
                   <TableCell sx={{ textAlign: "" }}>
                     Ingredients
                   </TableCell>
                 )}
                 <TableCell sx={{ textAlign: "center" }}>Price</TableCell>
-                {/* <TableCell sx={{ textAlign: "center" }}>Quantity</TableCell> */}
 
                 <TableCell sx={{ textAlign: "center" }}>Availabilty</TableCell>
                 {!isDashboard && (

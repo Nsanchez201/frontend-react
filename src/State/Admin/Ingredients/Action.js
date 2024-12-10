@@ -1,7 +1,5 @@
-// action.js
-import axios from 'axios';
-import { CREATE_INGREDIENT_CATEGORY_FAILURE, CREATE_INGREDIENT_CATEGORY_SUCCESS, CREATE_INGREDIENT_SUCCESS, GET_INGREDIENTS, GET_INGREDIENT_CATEGORY_FAILURE, GET_INGREDIENT_CATEGORY_SUCCESS, UPDATE_STOCK } from './ActionType';
-import { API_URL, api } from '../../../config/api';
+import { CREATE_INGREDIENT_CATEGORY_SUCCESS, CREATE_INGREDIENT_SUCCESS, GET_INGREDIENTS, GET_INGREDIENT_CATEGORY_FAILURE, GET_INGREDIENT_CATEGORY_SUCCESS, UPDATE_STOCK } from './ActionType';
+import { api } from '../../../config/api';
 
 export const getIngredientsOfRestaurant = ({id,jwt}) => {
   return async (dispatch) => {
@@ -14,11 +12,10 @@ export const getIngredientsOfRestaurant = ({id,jwt}) => {
       console.log("get all ingredients ",response.data)
       dispatch({
         type: GET_INGREDIENTS,
-        payload: response.data // Assuming the response contains the ingredients data
+        payload: response.data
       });
     } catch (error) {
         console.log("error",error)
-      // Handle error, dispatch an error action, etc.
     }
   };
 };
@@ -38,7 +35,6 @@ export const createIngredient = ({data,jwt}) => {
       });
     } catch (error) {
         console.log("error",error)
-      // Handle error, dispatch an error action, etc.
     }
   };
 };
@@ -59,7 +55,6 @@ export const createIngredientCategory = ({data,jwt}) => {
       });
     } catch (error) {
         console.log("error",error)
-      // Handle error, dispatch an error action, etc.
     }
   };
 };
@@ -101,7 +96,6 @@ export const updateStockOfIngredient = ({id,jwt}) => {
       console.log("update ingredients stock ",data)
     } catch (error) {
         console.log("error ",error)
-      // Handle error, dispatch an error action, etc.
     }
   };
 };

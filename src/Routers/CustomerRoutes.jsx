@@ -11,8 +11,6 @@ import Restaurant from '../customers/pages/Restaurant/Restaurant'
 import PasswordChangeSuccess from '../customers/pages/Auth/PasswordChangeSuccess'
 import NotFound from '../customers/pages/NotFound/NotFound'
 
-
-
 const CustomerRoutes = () => {
   return (
     <div className='relative'>

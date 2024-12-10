@@ -24,7 +24,6 @@ import {
   const RestaurantRequestTable = ({ isDashboard, name }) => {
     const dispatch = useDispatch();
     const { menu } = useSelector((store) => store);
-    // const { id } = useParams();
   
     useEffect(() => {
       

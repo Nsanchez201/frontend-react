@@ -1,6 +1,5 @@
 import { Box, Modal } from "@mui/material";
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
@@ -36,7 +35,6 @@ const style = {
 };
 
 const NewAddress = ({ open, handleClose }) => {
-  const location = useLocation();
 
   const handleSubmit = (values, { resetForm }) => {
     console.log("Submitted:", values);
