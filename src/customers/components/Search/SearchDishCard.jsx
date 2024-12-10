@@ -35,7 +35,7 @@ const SearchDishCard = ({item}) => {
           <div className="w-[70%] space-y-2">
            
             <p className="font-semibold">{item.name} </p>
-            <p>₹{item.price}</p>
+            <p>${item.price}</p>
             <p className="text-gray-400 text-sm">
               {item.description}
             </p>
